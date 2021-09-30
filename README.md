@@ -23,12 +23,21 @@ telnet HOST PORT
  ![image](https://user-images.githubusercontent.com/54339107/135369291-e49b6441-4923-43a7-8f2a-6b2069795c12.png)
 
 * ¿Qué codigo de error sale?, revise el significado del mismo en la lista de códigos de estado HTTP.
+*HTTP 301 Moved Permanently es un código de estado de HTTP que indica que el host ha sido capaz de comunicarse con el servidor pero que el recurso solicitado ha sido movido a otra dirección permanentemente.*
 * ¿Qué otros códigos de error existen?, ¿En qué caso se manejarán?
+  *Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:*
+     *1. Respuestas informativas (100–199),
+     *2. Respuestas satisfactorias (200–299),
+     *3. Redirecciones (300–399),
+     *4. Errores de los clientes (400–499),
+     *5.  errores de los servidores (500–599).
 4. Realice una nueva conexión con telnet, esta vez a:
 * Host: www.httpbin.org
 * Puerto: 80
 * Versión HTTP: 1.1
 Ahora, solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
+![image](https://user-images.githubusercontent.com/54339107/135370945-113f0fff-6aa9-4b8e-ba84-eb5270661e05.png)
+![image](https://user-images.githubusercontent.com/54339107/135370974-30e01d3b-bc05-4d37-b479-43c5a18db94d.png)
 
 ¡Muy bien!, ¡Acaba de usar del protocolo HTTP sin un navegador Web!. Cada vez que se usa un navegador, éste se conecta a un servidor HTTP, envía peticiones (del protocolo HTTP), espera el resultado de las mismas, y -si se trata de contenido HTML- lo interpreta y dibuja.
 
@@ -36,9 +45,22 @@ Ahora, solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
 
 wc -c 
 Pegue el contenido del portapapeles con CTRL-SHIFT-V y presione CTRL-D (fin de archivo de Linux). Si no termina el comando wc presione CTRL-D de nuevo. No presione mas de dos veces CTRL-D indica que se termino la entrada y puede cerrarle la terminal. Debe salir el resultado de la cantidad de caracteres que tiene el contenido HTML que respondió el servidor.
+![image](https://user-images.githubusercontent.com/54339107/135371506-f7bb9d10-e30e-419d-b1fb-575a681e6573.png)
+![image](https://user-images.githubusercontent.com/54339107/135371521-e4573b79-b984-4462-a848-2af7d523c57a.png)
 
-Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: ¿Cuál es la diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?
-
+Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: 
+¿Cuál es la diferencia entre los verbos GET y POST? 
+*Con el método GET, los datos que se envían al servidor se escriben en la misma dirección URL. En la ventana del navegador, lo encontrarás así:
+![image](https://user-images.githubusercontent.com/54339107/135372223-4b0fc73e-6c61-46ef-869d-6f9515820782.png)
+Toda la información introducida por el usuario (los llamados “parámetros URL”) se transmiten tan abiertamente como el URL en sí mismo. 
+El método POST introduce los parámetros en la solicitud HTTP para el servidor. Por ello, no quedan visibles para el usuario. Además, la capacidad del método POST es ilimitada.*
+¿Qué otros tipos de peticiones existen?
+   *GET
+   POST
+   HEAD
+   OPTIONS
+   TRACE
+   Métodos especiales (CONNECT,PATCH, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK)*
 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino el comando curl con ayuda de la linea de comandos:
 
 curl www.httpbin.org
