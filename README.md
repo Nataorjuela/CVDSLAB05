@@ -351,9 +351,18 @@ Implemente dicho método de manera que:
 
 20. Recompile y ejecute la aplicación. Abra en su navegador en la página del formulario, y rectifique que la página hecha anteriormente sea mostrada. Ingrese los datos y verifique los resultados. Cambie el formulario para que ahora en lugar de POST, use el método GET . 
 
-![image](https://user-images.githubusercontent.com/54339107/135400161-fee06b7e-1085-4b58-81af-6c7cd6e1ac2d.png)
+![image](https://user-images.githubusercontent.com/54339107/135400588-226dcb56-f0bc-4cfd-b26c-154967b7fd36.png)
+
+POST
+![image](https://user-images.githubusercontent.com/54339107/135400672-ff672ba6-07b1-4c4e-88ab-9ec857a1212a.png)
+
+GET
+![image](https://user-images.githubusercontent.com/54339107/135400553-501f55a7-5957-44be-b964-a813febdb5e0.png)
+
 
 ¿Qué diferencia observa?
+
+*la direcencia que observamos es que con el metodo POST al ingresar el Id nos redirige a la URL sin el id mientras que con el metodo GET nos redirigue a una URL con el id ingresado.*
 
 21. ¿Qué se está viendo? Revise cómo están implementados los métodos de la clase Service.java para entender el funcionamiento interno.
 
