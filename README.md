@@ -50,9 +50,14 @@ Pegue el contenido del portapapeles con CTRL-SHIFT-V y presione CTRL-D (fin de a
 
 Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: 
 ¿Cuál es la diferencia entre los verbos GET y POST? 
-*Con el método GET, los datos que se envían al servidor se escriben en la misma dirección URL. En la ventana del navegador, lo encontrarás así:
+
+*Con el método GET, los datos que se envían al servidor se escriben en la misma dirección URL. En la ventana del navegador, lo encontrarás así:*
+
+
 ![image](https://user-images.githubusercontent.com/54339107/135372223-4b0fc73e-6c61-46ef-869d-6f9515820782.png)
-Toda la información introducida por el usuario (los llamados “parámetros URL”) se transmiten tan abiertamente como el URL en sí mismo. 
+
+
+*Toda la información introducida por el usuario (los llamados “parámetros URL”) se transmiten tan abiertamente como el URL en sí mismo. 
 El método POST introduce los parámetros en la solicitud HTTP para el servidor. Por ello, no quedan visibles para el usuario. Además, la capacidad del método POST es ilimitada.*
 ¿Qué otros tipos de peticiones existen?
    *GET
@@ -61,6 +66,7 @@ El método POST introduce los parámetros en la solicitud HTTP para el servidor.
    OPTIONS
    TRACE
    Métodos especiales (CONNECT,PATCH, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK)*
+   
 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino el comando curl con ayuda de la linea de comandos:
 
 curl www.httpbin.org
@@ -75,6 +81,9 @@ curl -i www.httpbin.org
 ![image](https://user-images.githubusercontent.com/54339107/135373259-99acded9-6555-4651-989f-fe5058c93b3a.png)
 
 ¿Cuáles son las diferencias con los diferentes parámetros?
+
+*con el parametro -i se puede ver información como la fecha, el tipo de contenido,la longitus del contenido,el servidor, desde que lugares se tine permitido hacer requerimientos etc.*
+*con el parametro -v nos muestra la version que esta probando, el host, a quue dominio esta conectado y la cabecera del agente para identificar el protoco de red.
 
 ## PARTE II. - HACIENDO UNA APLICACIÓN WEB DINÁMICA A BAJO NIVEL.
 En este ejercicio, va a implementar una aplicación Web muy básica, haciendo uso de los elementos de más bajo nivel de Java-EE (Enterprise Edition), con el fin de revisar los conceptos del protocolo HTTP. En este caso, se trata de un módulo de consulta de clientes Web que hace uso de una librería de acceso a datos disponible en un repositorio Maven local.
