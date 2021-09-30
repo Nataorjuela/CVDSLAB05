@@ -64,10 +64,15 @@ El método POST introduce los parámetros en la solicitud HTTP para el servidor.
 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino el comando curl con ayuda de la linea de comandos:
 
 curl www.httpbin.org
+![image](https://user-images.githubusercontent.com/54339107/135373034-b2839b6d-1288-4b70-8eaa-dcc939f4f85c.png)
+
 Utilice ahora el parámetro -v y con el parámetro -i:
 
 curl -v www.httpbin.org
+![image](https://user-images.githubusercontent.com/54339107/135373170-e95a739a-ccc7-45f5-8cfb-f9276f3762a8.png)
+
 curl -i www.httpbin.org
+![image](https://user-images.githubusercontent.com/54339107/135373259-99acded9-6555-4651-989f-fe5058c93b3a.png)
 
 ¿Cuáles son las diferencias con los diferentes parámetros?
 
