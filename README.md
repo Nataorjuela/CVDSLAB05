@@ -211,6 +211,13 @@ mvn tomcat7:run
 7. Busque el artefacto gson en el repositorio de maven y agregue la dependencia.
 
 8. En el navegador revise la dirección https://jsonplaceholder.typicode.com/todos/1. Intente cambiando diferentes números al final del path de la url.
+*original*
+
+![image](https://user-images.githubusercontent.com/54339107/135392733-656a9111-22b8-4f5d-9c43-7e3dd4502f9c.png)
+
+cambio al numero 5
+
+![image](https://user-images.githubusercontent.com/54339107/135392763-472a9d7c-2f8e-46ee-a378-e5f334d4e61d.png)
 
 9. Basado en la respuesta que le da el servicio del punto anterior, cree la clase edu.eci.cvds.servlet.model.Todo con un constructor vacío y los métodos getter y setter para las propiedades de los "To Dos" que se encuentran en la url indicada.
 
