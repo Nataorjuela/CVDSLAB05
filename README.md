@@ -307,6 +307,14 @@ Implemente dicho método de manera que:
 14. Una vez hecho esto, verifique el funcionamiento de la aplicación, recompile y ejecute la aplicación.
 
 15. Intente hacer diferentes consultas desde un navegador Web para probar las diferentes funcionalidades.
+*GET*
+![image](https://user-images.githubusercontent.com/54339107/135397457-d6796ef5-5b33-4883-bc6f-a3960ec8817f.png)
+![image](https://user-images.githubusercontent.com/54339107/135397924-481bb833-3e2f-4064-b74d-47b88db949c1.png)
+
+POS
+![image](https://user-images.githubusercontent.com/54339107/135397552-6d629a85-d9db-4701-a07b-30e2df4fc711.png)
+![image](https://user-images.githubusercontent.com/54339107/135397798-39969a66-798c-4650-9de2-afcb5081b8e2.png)
+
 
 ## PARTE III.
 
