@@ -20,6 +20,7 @@ telnet HOST PORT
 * Revise la página 36 del RFC del protocolo HTTP, sobre cómo realizar una petición GET. Con esto, solicite al servidor el recurso ‘sssss/abc.html’, usando la versión 1.0 de HTTP.
 * Asegúrese de presionar ENTER dos veces después de ingresar el comando.
 * Revise el resultado obtenido. 
+* 
  ![image](https://user-images.githubusercontent.com/54339107/135369291-e49b6441-4923-43a7-8f2a-6b2069795c12.png)
 
 * ¿Qué codigo de error sale?, revise el significado del mismo en la lista de códigos de estado HTTP.
@@ -36,6 +37,7 @@ telnet HOST PORT
 * Puerto: 80
 * Versión HTTP: 1.1
 Ahora, solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
+
 ![image](https://user-images.githubusercontent.com/54339107/135370945-113f0fff-6aa9-4b8e-ba84-eb5270661e05.png)
 ![image](https://user-images.githubusercontent.com/54339107/135370974-30e01d3b-bc05-4d37-b479-43c5a18db94d.png)
 
@@ -70,14 +72,17 @@ El método POST introduce los parámetros en la solicitud HTTP para el servidor.
 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino el comando curl con ayuda de la linea de comandos:
 
 curl www.httpbin.org
+
 ![image](https://user-images.githubusercontent.com/54339107/135373034-b2839b6d-1288-4b70-8eaa-dcc939f4f85c.png)
 
 Utilice ahora el parámetro -v y con el parámetro -i:
 
 curl -v www.httpbin.org
+
 ![image](https://user-images.githubusercontent.com/54339107/135373170-e95a739a-ccc7-45f5-8cfb-f9276f3762a8.png)
 
 curl -i www.httpbin.org
+
 ![image](https://user-images.githubusercontent.com/54339107/135373259-99acded9-6555-4651-989f-fe5058c93b3a.png)
 
 ¿Cuáles son las diferencias con los diferentes parámetros?
@@ -191,6 +196,7 @@ y agregue la seccion build al final del tag project en el archivo pom.xml:
 </build>
 ~~~
 3. Revise en el pom.xml para qué puerto TCP/IP está configurado el servidor embebido de Tomcat (ver sección de plugins).
+4. 
 ![image](https://user-images.githubusercontent.com/54339107/135377776-adaa5451-ecf2-4c6f-9018-e2d6f2514d3a.png)
 
 4. Compile y ejecute la aplicación en el servidor embebido Tomcat, a través de Maven con:
@@ -307,12 +313,18 @@ Implemente dicho método de manera que:
 14. Una vez hecho esto, verifique el funcionamiento de la aplicación, recompile y ejecute la aplicación.
 
 15. Intente hacer diferentes consultas desde un navegador Web para probar las diferentes funcionalidades.
+
 *GET*
+
 ![image](https://user-images.githubusercontent.com/54339107/135397457-d6796ef5-5b33-4883-bc6f-a3960ec8817f.png)
+
+
 ![image](https://user-images.githubusercontent.com/54339107/135397924-481bb833-3e2f-4064-b74d-47b88db949c1.png)
 
-POS
+*POS*
+
 ![image](https://user-images.githubusercontent.com/54339107/135397552-6d629a85-d9db-4701-a07b-30e2df4fc711.png)
+
 ![image](https://user-images.githubusercontent.com/54339107/135397798-39969a66-798c-4650-9de2-afcb5081b8e2.png)
 
 
