@@ -202,6 +202,7 @@ mvn tomcat7:run
 ![image](https://user-images.githubusercontent.com/54339107/135390273-c6daf874-9a52-409c-b840-602078d72a0e.png)
 
 6. Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’. Ingrese la misma URL, pero ahora agregando un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp).
+
 ![image](https://user-images.githubusercontent.com/54339107/135391946-6e4d8dbe-32bd-4311-b1b1-4ccfac5d3169.png)
 
 7. Busque el artefacto gson en el repositorio de maven y agregue la dependencia.
