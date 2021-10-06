@@ -9,15 +9,20 @@
     </h:head>
     <h:body>
         <h:form id="calculadora_form">
-            <p:outputLabel value="#{megaStat.getModa()}" style="display: none;"/>
-            <p:inputText id="datos" binding="#{input}" value="#{megaStat.getCantDato()}"/>
+           
+            <p:outputLabel id="moda" value="#{calculadoraBean.moda}" style="display: none;"/>
             <h5>ingrese la lista de datos separados por ;</h5>
-            <p:outputLabel id="varianza" value="#{calculadoraBean.getVarianza()}"/>
-            <p:outputLabel id="desvEst" value="#{calculadoraBean.getDesvEst()}"/>
-            <p:outputLabel id="media" value="#{calculadoraBean.getMedia()}"/>
+            <p:inputText id="datos" binding="#{input}" value="ej:1;2;3"/>
+            <p:outputLabel id="varianza" value="#{calculadoraBean.varianza}"/>
+            <p:outputLabel id="desvEst" value="#{calculadoraBean.desvEst}"/>
+            <p:outputLabel id="media" value="#{calculadoraBean.media}"/>
         </h:form>
-        <p:commandButton value="Sumbit" update="calculadora_form" actionListener="#{calculadoraBean.megaStat(input.value)}"/>
-        <p:commandButton value="Restart" update="calculadora_form" actionListener="#{megaStat.restart()}"/>
+        <p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateStandardDeviation(input.value)}" value="Calcular Desviacion Estandar"/>
+        <p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateVariance(input.value)}" value="Calcular Varianza"/>
+        <p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateMode(input.value)}" value="Calcular Moda"/>
+        <p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateMean(input.value)}" value="Calcular Media"/>
+        <p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.restart}" value="Reiniciar"/>
+
     </h:body>
 </html>
 

@@ -1,12 +1,5 @@
 
 import java.util.ArrayList;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author natao
@@ -49,7 +42,7 @@ public class megaStat {
     }
     
     public float calculateMode(ArrayList<Float>dato){
-        float moda=0;
+        moda=0;
         int conta=0;
         int mayor=0;
         float [] d=getDato();
