@@ -62,12 +62,16 @@ Claro está, las peticiones GET son insuficientes en muchos casos. Investigue:
 *Toda la información introducida por el usuario (los llamados “parámetros URL”) se transmiten tan abiertamente como el URL en sí mismo. 
 El método POST introduce los parámetros en la solicitud HTTP para el servidor. Por ello, no quedan visibles para el usuario. Además, la capacidad del método POST es ilimitada.*
 ¿Qué otros tipos de peticiones existen?
-   *GET
-   POST
-   HEAD
-   OPTIONS
-   TRACE
-   Métodos especiales (CONNECT,PATCH, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK)*
+   * GET
+   
+   * POST
+   
+   * HEAD
+   
+   * OPTIONS
+   
+   * TRACE
+   * Métodos especiales (CONNECT,PATCH, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK)*
    
 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino el comando curl con ayuda de la linea de comandos:
 
