@@ -80,7 +80,7 @@ public class NewServlet extends HttpServlet {
         catch (Exception e) {
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
             writeNotFound(resp.getWriter());
-
+            
         }
     }
 
