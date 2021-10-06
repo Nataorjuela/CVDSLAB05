@@ -422,10 +422,10 @@ Donde <servlet-name> es un nombre identificativo y arbitrario del servlet, y <se
 cargar al inicio en web.xml
 El elemento de carga al inicio de la aplicación web carga el servlet en el momento de la implementación o el inicio del servidor si el valor es positivo. También se conoce como preinicialización de servlet .
 Puede pasar un valor positivo y negativo para el servlet.
-________________________________________
+
 Ventaja del elemento de carga al inicio
 Como bien sabe, el servlet se carga en la primera solicitud. Eso significa que consume más tiempo a la primera solicitud. Si especifica la carga al inicio en web.xml, el servlet se cargará en el momento de la implementación del proyecto o al inicio del servidor. Por lo tanto, tomará menos tiempo responder a la primera solicitud.
-________________________________________
+
 Pasando valor positivo
 Si pasa el valor positivo, el servlet de valor entero inferior se cargará antes que el servlet de valor entero superior. En otras palabras, el contenedor carga los servlets en un valor entero ascendente. El valor 0 se cargará primero, luego 1, 2, 3 y así sucesivamente.
 Intentemos entenderlo con el ejemplo que se da a continuación:
