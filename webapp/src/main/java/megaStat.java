@@ -75,8 +75,14 @@ public class megaStat {
     return n;
     }
     
-    
-    
+    public void restart(){
+        datos=new ArrayList<Float>();
+        media=0;
+        moda=0;
+        desvEst=0;
+        varianza=0;
+    }
+
     public float[] getDato(){
       int n = datos.size();
       float [] vector= new float[n];
