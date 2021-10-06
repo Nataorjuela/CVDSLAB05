@@ -1,18 +1,23 @@
-
-<!DOCTYPE xhtml>
-<html  xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-        xmlns:p="http://primefaces.org/ui" >     
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>calculadora probabilidad</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Calculadora Probabilidad</title>
     </h:head>
-    
     <h:body>
-        <h:form>
-            <p: outputLabel value="moda" style="display:none"/>    
+        <h:form id="calculadora_form">
+            <p:outputLabel value="#{megaStat.getModa()}" style="display: none;"/>
+            <p:inputText id="datos" binding="#{input}" value="#{megaStat.getCantDato()}"/>
+            <h5>ingrese la lista de datos separados por ;</h5>
+            <p:outputLabel id="varianza" value="#{calculadoraBean.getVarianza()}"/>
+            <p:outputLabel id="desvEst" value="#{calculadoraBean.getDesvEst()}"/>
+            <p:outputLabel id="media" value="#{calculadoraBean.getMedia()}"/>
         </h:form>
+        <p:commandButton value="Sumbit" update="calculadora_form" actionListener="#{calculadoraBean.megaStat(input.value)}"/>
+        <p:commandButton value="Restart" update="calculadora_form" actionListener="#{megaStat.restart()}"/>
     </h:body>
 </html>
+

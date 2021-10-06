@@ -18,11 +18,11 @@ import java.util.*;
 @ManagedBean(name = "calculadoraBean")
 @ApplicationScoped
 public class megaStat {
-    private ArrayList<Float> datos=new ArrayList <Float>();
-    private float media;
-    private float moda;
-    private float desvEst;
-    private float varianza;
+    public ArrayList<Float> datos=new ArrayList <Float>();
+    public float media;
+    public float moda;
+    public float desvEst;
+    public float varianza;
     
 
     public megaStat (){}
