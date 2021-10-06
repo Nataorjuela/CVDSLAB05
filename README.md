@@ -399,6 +399,60 @@ Diagrama de casos de uso de la aplicación:
 </welcome-file-list>
 ~~~
 3. Revise cada una de las configuraciones agregadas anteriormente para saber qué hacen y por qué se necesitan. Elimine las que no se necesiten.
+ 
+ ---
+:sparkles: Servlet:
+El uso más común de los servlets es generar páginas web de forma dinámica a partir de los parámetros de la petición que envíe el navegador web.
+servidor carga un servlet, ejecuta el método init del servlet
+utilizada para ampliar las capacidades de un servidor. 
+pueden responder a cualquier tipo de solicitudes
+utilizados comúnmente para extender las aplicaciones alojadas por servidores web
+
+:star: Servlet name:
+los servlet elemento de un web.xmlarchivo define una instancia de servlet. losservlet elemento siempre contiene un nombre-servlet elemento y un clase de servlet elemento, y también puede contener parámetros de inicialización.
+ento declara un nombre para esta instancia de servlet en particular. Cada instancia de servlet en un contexto debe tener un nombre exclusivo. Sin embargo, el nombre solo se usa para asociar mapeos de URL con esta instancia y no es necesario que corresponda con el nombre de la clase de servlet o la URL del servlet.
+Faces Servlet:
+Es la base de como se crean las aplicaciones java. Se fundamenta  en jSPs, Jsf es la evolución del uso de tecnologías de de jsp con un patrón de diseño 
+Servlet class:
+
+Notar que se pone el subdirectorio servlet, aunque la aplicación no contiene dicho subdirectorio. Esto es porque, mediante este subdirectorio "virtual" (inexistente), el servidor Web interpreta que tiene que cargar una clase del directorio classes, y que dicha clase es un servlet.
+Donde <servlet-name> es un nombre identificativo y arbitrario del servlet, y <servlet-class> es la clase del servlet (incluyendo paquetes y subpaquetes, separados por '.'). Con esto, al servlet ClaseServlet lo podemos llamar de dos formas:
+
+:star2: load-on-startup:
+cargar al inicio en web.xml
+El elemento de carga al inicio de la aplicación web carga el servlet en el momento de la implementación o el inicio del servidor si el valor es positivo. También se conoce como preinicialización de servlet .
+Puede pasar un valor positivo y negativo para el servlet.
+________________________________________
+Ventaja del elemento de carga al inicio
+Como bien sabe, el servlet se carga en la primera solicitud. Eso significa que consume más tiempo a la primera solicitud. Si especifica la carga al inicio en web.xml, el servlet se cargará en el momento de la implementación del proyecto o al inicio del servidor. Por lo tanto, tomará menos tiempo responder a la primera solicitud.
+________________________________________
+Pasando valor positivo
+Si pasa el valor positivo, el servlet de valor entero inferior se cargará antes que el servlet de valor entero superior. En otras palabras, el contenedor carga los servlets en un valor entero ascendente. El valor 0 se cargará primero, luego 1, 2, 3 y así sucesivamente.
+Intentemos entenderlo con el ejemplo que se da a continuación:
+
+:dizzy: servlet mapping:
+Pero de nada nos sirve el crear un servlet si no lo publicamos al exterior. Este mecanismo de publicación es lo que se conoce como crear un mapping.
+La idea del mapping es la de asociar una URL o un patrón de una URL a un servlet.
+Para ello deberemos de configurar el descriptor de despliegue de la aplicación. Este es el fichero que encontramos en /WEB-INF/web.xml
+En este fichero necesitaremos de la etiqueta servlet-mapping. Esta etiqueta nos permitirá definir un nuevo mapping. Anidado a esta etiqueta encontramos dos:
+servlet-name, la primera especificará el nombre del servlet sobre el que queremos establecer el mapping
+
+:boom: url pattern:
+url-pattern,  la segunda especificará sobre que URL se realiza el mapping.
+welcome file list:
+El elemento welcome-file-list de web-app , se utiliza para definir una lista de archivos de bienvenida. Su subelemento es el archivo de bienvenida que se utiliza para definir el archivo de bienvenida.
+Un archivo de bienvenida es el archivo que el servidor invoca automáticamente, si no especifica ningún nombre de archivo.
+Por defecto, el servidor busca el archivo de bienvenida en el siguiente orden:
+lista de archivos de bienvenida en web.xml
+index.html
+index.htm
+index.jsp
+Si no se encuentra ninguno de estos archivos, el servidor muestra el error 404.
+
+:collision: welcome file:
+l elemento welcome-file-list de web-app, se utiliza para definir una lista de archivos de bienvenida. Su subelemento es welcome-file que se utiliza para definir el archivo de bienvenida. Un archivo de bienvenida es el archivo que es invocado automáticamente por el servidor, si no se especifica ningún nombre de archivo.
+
+ ---
 
 4. Ahora, va a crear un Backing-Bean de sesión, el cual, para cada usuario, mantendrá de lado del servidor las siguientes propiedades:
 
